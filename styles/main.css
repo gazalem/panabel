@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+:root {
+    --heading-font: Arvo, serif;
+    --body-font: Lato, sans-serif;
+    --wording-colors: #231f20;
+    --panabel-letter-color: #57575a;
+    --panabel-vela-izquierda: #8cd0c9;
+    --panabel-vela-derecha: #4fc1bc;
+    --default-font: "Microsoft Tai Le", sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--panabel-letter-color);
+}
+
+header {
+    background-image: url("../images/header.jpeg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    margin: 0;
+    padding: 4rem;
+}
+
+form {
+    color: var(--default-font);
+    padding: 0 0.5rem;
+    margin: 2rem auto;
+}
+
+fieldset {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-color: var(--panabel-vela-izquierda);
+}
+
+.radioBtns {
+    display: grid;
+    /* background-color: var(--third-color);
+    color: var(--panabel-vela-derecha); */
+}
+
+.radioBtns legend {
+    margin: 1rem;
+}
+
+.selectOption {
+    margin: 1rem 0;
+}
+
+.selectOption select {
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+legend {
+    color: var(--panabel-letter-color);
+    padding: 0 0.5rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--panabel-vela-derecha);
+    color: var(--third-color);
+    padding: 1rem;
+    border: 1 solid var(--panabel-vela-derecha);
+    border-radius: 5px;
+    /* margin-bottom: 2rem; */
+}
+
+input[type="submit"]:hover {
+    background-color: var(--panabel-vela-izquierda);
+    border: 1px solid var(--wording-colors);
+    font-weight: bold;
+}
+
+.entryData input, textarea {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+    width: 95%;
+    box-shadow: none;
+}
+
+.entryData input:required {
+    border-left: 6px solid var(--panabel-vela-derecha);
+}

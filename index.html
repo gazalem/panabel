@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alan Montoya">
+    <meta name="description" content="Form to subscribe customers in our Newsletter and Customer DB">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest"> -->
+    <!-- normalize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome - Icon Library -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Panabel - Afiliación de Clientes</title>
+</head>
+
+<body>
+    <main>
+        <!-- Page Header -->
+        <header>
+            <h1>BASE DE DATOS PANABEL PANAMÁ</h1>
+            <h3>RECOPILA LOS DATOS DE LOS CLIENTES PARA NUESTRA BASE DE DATOS</h3>
+        </header>
+        <form id="myform">
+            <!-- Generales -->
+            <fieldset>
+                <legend>Generales del Clientes</legend>
+                <label class="entryData" >First Name <input type="text" name="first_name" required></label>
+                <label class="entryData">Last Name <input type="text" name="last_name" required></label>
+                <label class="entryData">Cell Phone <input type="tel" name="telefono" placeholder="+### ####-####" required plattern="^[0-9]{3}-[0-9]{4}-[0-9]{4}$"></label>
+                <label class="entryData" >Email <input type="email" name="email" placeholder="someone@dominio.com" required></label>
+                <label class="entryData">Fecha de Cumpleaños: <input type="date" name="cumpleanos" id="cumpleanos" required></label>
+                <div class="radioBtns">
+                    <legend>Genero</legend>
+                    <label><input type="radio" name="genero" value="Hombre"> Hombre</label>
+                    <label><input type="radio" name="genero" value="Mujer"> Mujer</label>
+                    <label><input type="radio" name="genero" value="Otro"> Otro</label>
+                </div>
+                <label class="selectOption">Residencia: 
+                    <select name="residencia" id="">
+                        <option value="Panamá">Panamá</option>
+                        <option value="Panamá Oeste">Panamá Oeste</option>
+                        <option value="Colón">Colón</option>
+                        <option value="Cocle">Cocle</option>
+                        <option value="Veraguas">Veraguas</option>
+                        <option value="Los Santos">Los Santos</option>
+                        <option value="Chiriquí">Chiriquí</option>
+                        <option value="Bocas del Toro">Bocas del Toro</option>
+                        <option value="Herrera">Herrera</option>
+                        <option value="Darién">Darién</option>
+                        <option value="Frontera con Costa Rica">Frontera con Costa Rica</option>
+                    </select>
+                </label>
+            </fieldset>
+            <!-- Información de Punto de Venta -->
+            <fieldset>
+                <legend>Información de Punto de Venta</legend>
+                <div class="radioBtns">
+                    <legend>Punto de Venta</legend>
+                    <label><input type="radio" name="punto_de_venta" value="Arrocha"> Arrocha</label>
+                    <label><input type="radio" name="punto_de_venta" value="Felix B. Maduro"> Felix B. Maduro</label>
+                    <label><input type="radio" name="punto_de_venta" value="Steven's"> Steven's</label>
+                    <label><input type="radio" name="punto_de_venta" value="Aliss"> Aliss</label>
+                    <label><input type="radio" name="punto_de_venta" value="Wong Chang"> Wong Chang</label>
+                    <label><input type="radio" name="punto_de_venta" value="otros"> otros</label>
+                </div>
+                <div class="radioBtns">
+                    <legend>Marcas que Compro</legend>
+                    <label><input type="checkbox" name="marcas_que_compro" value="Acqua di Parma"> Acqua di Parma</label>
+                    <label><input type="checkbox" name="marcas_que_compro" value="Montblanc"> Montblanc</label>
+                    <label><input type="checkbox" name="marcas_que_compro" value="Guerlain"> Guerlain</label>
+                    <label><input type="checkbox" name="marcas_que_compro" value="Women Secret"> Women Secret</label>
+                </div>
+                <div class="radioBtns">
+                    <legend>Exclusivo para Consejeras Guerlain</legend>
+                    <label><input type="radio" name="exclusivo_guerlain" value="Abeille Royal"> Abeille Royal</label>
+                    <label><input type="radio" name="exclusivo_guerlain" value="Orquidia Imperial"> Orquidia Imperial</label>
+                    <label><input type="radio" name="exclusivo_guerlain" value="Fragancias"> Fragancias</label>
+                    <label><input type="radio" name="exclusivo_guerlain" value="Maquillaje"> Maquillaje</label>
+                    <label><input type="radio" name="exclusivo_guerlain" value="Otros"> Otros</label>
+                </div>
+                <label class="selectOption">Consejera: 
+                    <select name="consejera">
+                        <option value="Elsa Rodriguez">Elsa Rodriguez</option>
+                        <option value="Denis Pitty">Denis Pitty</option>
+                        <option value="Rubitza D'angelo">Rubitza D'angelo</option>
+                        <option value="Panabel Interno">Panabel Interno</option>
+                    </select>
+                </label>
+            </fieldset>
+            <input type="submit" value="Enviar Respuestas" class="submitBtn">
+
+        </form>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
