@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "db5adf5b-73f5-427c-87ca-3b73d56e454c",
+		"name": "Convertkit API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createFormFields",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_secret\": \"{{api_secret}}\",\r\n    \"label\": [\r\n        \"Genero\",\r\n        \"Recidencia\",\r\n        \"Punto de Venta\",\r\n        \"Marcas que Compro\",\r\n        \"Exclusivo Guerlain\",\r\n        \"Consejera\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{convertkit_url}}/{{custom_fields}}",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"{{custom_fields}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Subscriber",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_key\": \"{{api_key}}\",\r\n    \"tags\": [3709979],\r\n    \"email\": \"karina.lum@panabel.com\",\r\n    \"first_name\": \"Karina\",\r\n    \"fields\": {\r\n        \"last_name\": \"Lum\",\r\n        \"telefono\": \"6123-4567\",\r\n        \"cumpleanos\": \"05/13/1980\",\r\n        \"genero\": \"Mujer\",\r\n        \"residencia\": \"Panamá\",\r\n        \"punto_de_venta\": \"Felix B Maduro\",\r\n        \"marcas_que_compro\": \"Lowe, Jimmy Choo, Aqua Di Parma, Guerlain\",\r\n        \"exclusivo_guerlain\": \"Abeille Royal\",\r\n        \"consejera\": \"Panabel Interno\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "{{convertkit_url}}/forms/{{form_id}}/subscribe",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"forms",
+						"{{form_id}}",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Subscriber Brisi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_key\": \"{{api_key}}\",\r\n    \"tags\": [3709979],\r\n    \"email\": \"brisilda.yanguez@panabel.com\",\r\n    \"first_name\": \"Brisilda\",\r\n    \"fields\": {\r\n        \"last_name\": \"Yangüez\",\r\n        \"telefono\": \"6123-4568\",\r\n        \"cumpleanos\": \"10/13/1980\",\r\n        \"genero\": \"Mujer\",\r\n        \"residencia\": \"Panamá\",\r\n        \"punto_de_venta\": \"Arrocha\",\r\n        \"marcas_que_compro\": \"Lowe, Jimmy Choo, Aqua Di Parma, Guerlain\",\r\n        \"exclusivo_guerlain\": \"Abeille Royal\",\r\n        \"consejera\": \"Panabel Interno\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "{{convertkit_url}}/forms/{{form_id}}/subscribe",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"forms",
+						"{{form_id}}",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Forms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.convertkit.com/v3/forms?api_key=IaPbljammDGek6YeDlF9sA",
+					"protocol": "https",
+					"host": [
+						"api",
+						"convertkit",
+						"com"
+					],
+					"path": [
+						"v3",
+						"forms"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "IaPbljammDGek6YeDlF9sA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewFormCustomFields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.convertkit.com/v3/{{custom_fields}}?{{apiKey_param}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"convertkit",
+						"com"
+					],
+					"path": [
+						"v3",
+						"{{custom_fields}}"
+					],
+					"query": [
+						{
+							"key": "{{apiKey_param}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Subscribers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.convertkit.com/v3/subscribers?api_secret={{api_secret}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"convertkit",
+						"com"
+					],
+					"path": [
+						"v3",
+						"subscribers"
+					],
+					"query": [
+						{
+							"key": "api_secret",
+							"value": "{{api_secret}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewSingleSubscriber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{convertkit_url}}/subscribers/{{subscriber_id}}?api_secret={{api_secret}}",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"subscribers",
+						"{{subscriber_id}}"
+					],
+					"query": [
+						{
+							"key": "api_secret",
+							"value": "{{api_secret}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{convertkit_url}}/tags?api_key={{api_key}}",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"tags"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TagSubscriber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_secret\": \"{{api_secret}}\",\r\n    \"email\": \"karina.lum@panabel.com\",\r\n    \"tags\": [{{tag_id}}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{convertkit_url}}/tags/{{tag_id}}/subscribe",
+					"host": [
+						"{{convertkit_url}}"
+					],
+					"path": [
+						"tags",
+						"{{tag_id}}",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "convertkit_url",
+			"value": "https://api.convertkit.com/v3/",
+			"type": "default"
+		},
+		{
+			"key": "api_key",
+			"value": "IaPbljammDGek6YeDlF9sA",
+			"type": "default"
+		},
+		{
+			"key": "api_secret",
+			"value": "jketIrF8he7XkPoFoMkWHkjzFoFXu5DGOWwkVDRwIbM",
+			"type": "default"
+		},
+		{
+			"key": "form_id",
+			"value": "4952240",
+			"type": "default"
+		},
+		{
+			"key": "custom_fields",
+			"value": "custom_fields",
+			"type": "default"
+		},
+		{
+			"key": "apiKey_param",
+			"value": "api_key=IaPbljammDGek6YeDlF9sA",
+			"type": "default"
+		},
+		{
+			"key": "subscriber_id",
+			"value": "2090901174",
+			"type": "default"
+		},
+		{
+			"key": "tag_id",
+			"value": "3709979",
+			"type": "default"
+		}
+	]
+}
