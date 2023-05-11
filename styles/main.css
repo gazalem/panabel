@@ -91,6 +91,14 @@ input[type="submit"]:hover {
     font-weight: bold;
 }
 
+#exclusivoGuerlain {
+    display: none;
+}
+
+/* input[value|="Guerlain"]:checked {
+    display: grid;
+} */
+
 .entryData input, textarea {
     display: block;
     padding: 0.5rem;

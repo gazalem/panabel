@@ -39,8 +39,8 @@
                 <legend>Generales del Clientes</legend>
                 <label class="entryData" >First Name <input type="text" name="first_name" required></label>
                 <label class="entryData">Last Name <input type="text" name="last_name" required></label>
-                <label class="entryData">Cell Phone <input type="tel" name="telefono" placeholder="+### ####-####" required plattern="^[0-9]{3}-[0-9]{4}-[0-9]{4}$"></label>
-                <label class="entryData" >Email <input type="email" name="email" placeholder="someone@dominio.com" required></label>
+                <label class="entryData">Cell Phone <input type="tel" name="telefono" placeholder="+### ####-####" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></label>
+                <label class="entryData" >Email <input type="email" name="email" placeholder="someone@dominio.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"></label>
                 <label class="entryData">Fecha de Cumpleaños: <input type="date" name="cumpleanos" id="cumpleanos" required></label>
                 <div class="radioBtns">
                     <legend>Genero</legend>
@@ -80,10 +80,10 @@
                     <legend>Marcas que Compro</legend>
                     <label><input type="checkbox" name="marcas_que_compro" value="Acqua di Parma"> Acqua di Parma</label>
                     <label><input type="checkbox" name="marcas_que_compro" value="Montblanc"> Montblanc</label>
-                    <label><input type="checkbox" name="marcas_que_compro" value="Guerlain"> Guerlain</label>
+                    <label><input type="checkbox" name="marcas_que_compro" value="Guerlain" onclick="unhide()"> Guerlain</label>
                     <label><input type="checkbox" name="marcas_que_compro" value="Women Secret"> Women Secret</label>
                 </div>
-                <div class="radioBtns">
+                <div class="radioBtns" id="exclusivoGuerlain">
                     <legend>Exclusivo para Consejeras Guerlain</legend>
                     <label><input type="radio" name="exclusivo_guerlain" value="Abeille Royal"> Abeille Royal</label>
                     <label><input type="radio" name="exclusivo_guerlain" value="Orquidia Imperial"> Orquidia Imperial</label>
